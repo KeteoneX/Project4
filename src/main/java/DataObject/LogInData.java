@@ -12,6 +12,19 @@ public class LogInData {
 
 
     incorrectUsernameData = faker1.bothify("????##"),
-    incorrectPasswordData = faker1.bothify("????##??");
+    incorrectPasswordData = faker1.bothify("????##??"),
+
+    emptyUsernameData = "",
+
+    emptyPasswordData = "",
+
+    passwordWithSpaceData = "     ",
+
+    usernameWithSpaceData = "      ";
+
+
+
+
+
 
 }

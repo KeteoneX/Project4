@@ -7,21 +7,25 @@ import org.testng.annotations.BeforeMethod;
 
 public class BrowserActions {
 
-  public static  WebDriver driver = new ChromeDriver();
+    public static WebDriver driver;
 
     @BeforeMethod
+    public  void openBrowser(){
+        if (driver ==null){
+            driver = new ChromeDriver();
+        }
 
-    public void openBrowser(){
         driver.manage().window().maximize();
-        driver.get("https://www.saucedemo.com/inventory.html");
+        driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
+    public static void closeBrowser() {
+        if (driver != null) {
+            driver.quit();
+        }
+        driver = null;
 
-    public void closeBrowser(){
-        driver.quit();
+
     }
-
-
-
 }
