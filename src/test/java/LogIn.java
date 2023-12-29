@@ -40,7 +40,7 @@ public class LogIn {
         softAssert.assertEquals(expectedUrl, actualUrl);
         softAssert.assertAll();
 
-        Thread.sleep(5000);
+
 
 
     }
@@ -64,7 +64,7 @@ public class LogIn {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(expectedUrl, actualUrl);
         softAssert.assertAll();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
 
 
     }
