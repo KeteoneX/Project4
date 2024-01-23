@@ -48,7 +48,7 @@ public class LogIn extends BrowserActions {
 
     }
 
-    @Description("დალოგინება რასწორი მონაცემებით")
+    @Description("დალოგინება არასწორი მონაცემებით")
     @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 2)
     public void incorrectUsernameAndPass() throws InterruptedException {
