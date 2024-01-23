@@ -1,7 +1,6 @@
 import Browser.BrowserActions;
 import StepObject.LogInSteps;
 import io.qameta.allure.Description;
-import io.qameta.allure.Link;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.By;
