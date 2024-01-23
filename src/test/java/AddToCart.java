@@ -44,7 +44,7 @@ public class AddToCart  extends BrowserActions {
 
         step1.addItemAction();
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
         step1.removeItemAction();
 
