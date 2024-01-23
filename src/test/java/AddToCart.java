@@ -58,15 +58,15 @@ public class AddToCart  extends BrowserActions {
         step1.logInButtonAction();
 
         step2.addItemAction();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         step2.addItemAction2();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         step2.addItemAction3();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         step2.addItemAction4();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         step2.addItemAction5();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         step2.addItemAction6();
 
         WebElement cartCountElement = driver.findElement(By.className("shopping_cart_badge"));
