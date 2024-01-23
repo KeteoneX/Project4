@@ -9,7 +9,7 @@ public class BrowserActions {
 
     public static WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod (description = "Chrome ბრაუზერის გახსნა")
     public  void openBrowser(){
         if (driver ==null){
             driver = new ChromeDriver();
@@ -19,7 +19,7 @@ public class BrowserActions {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterMethod
+    @AfterMethod (description = "Chrome ბრაუზერის დახურვა")
     public static void closeBrowser() {
         if (driver != null) {
             driver.quit();

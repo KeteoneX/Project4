@@ -1,5 +1,9 @@
 import Browser.BrowserActions;
 import StepObject.LogInSteps;
+import io.qameta.allure.Description;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,6 +15,9 @@ import static DataObject.LogInData.*;
 public class LogIn extends BrowserActions {
 
     @Test(priority = 1)
+    @Description("დალოგინება სწორი მონაცემებით")
+    @Severity(SeverityLevel.CRITICAL)
+
     public void loginWithCorrectData() throws InterruptedException {
         try {
             LogInSteps step1 = new LogInSteps(driver);
@@ -41,6 +48,8 @@ public class LogIn extends BrowserActions {
 
     }
 
+    @Description("დალოგინება რასწორი მონაცემებით")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 2)
     public void incorrectUsernameAndPass() throws InterruptedException {
 
@@ -66,6 +75,8 @@ public class LogIn extends BrowserActions {
 
     }
 
+    @Description("დალოგინება ცარიელი მომხმარებლის ველით")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 3)
     public void emptyUsername () throws InterruptedException {
         LogInSteps step3 = new LogInSteps(driver);
@@ -78,6 +89,8 @@ public class LogIn extends BrowserActions {
 
 
     }
+    @Description("დალოგინება ცარიელი პაროლის ველით")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 4)
     public void emptyPassword() throws InterruptedException {
         LogInSteps step4 = new LogInSteps(driver);
@@ -89,6 +102,8 @@ public class LogIn extends BrowserActions {
         step4.logInButtonAction();
 
     }
+    @Description("დალოგინება ვალიდურად და დალოგაუთება")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 5)
     public void LoginAndLogout () throws InterruptedException {
         LogInSteps step5 = new LogInSteps(driver);
@@ -113,7 +128,9 @@ public class LogIn extends BrowserActions {
         softAssert.assertAll();
 
     }
-   @Test (priority = 6)
+    @Description("დალოგინება ენთერ ღილაკით")
+    @Severity(SeverityLevel.NORMAL)
+    @Test (priority = 6)
     public void logInButtonWithEnter () throws InterruptedException {
         LogInSteps step6 = new LogInSteps(driver);
         step6.usernameFieldAction(correctUsernameData);
@@ -130,6 +147,8 @@ public class LogIn extends BrowserActions {
        softAssert.assertAll();
 
     }
+    @Description("დალოგინება სფეისებით")
+    @Severity(SeverityLevel.NORMAL)
     @Test(priority = 7)
     public void LoginWithSpaceUsernameAndPassword () throws InterruptedException {
         LogInSteps step7 = new LogInSteps(driver);

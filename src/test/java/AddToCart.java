@@ -1,6 +1,9 @@
 import Browser.BrowserActions;
 import StepObject.AddToCartSteps;
 import StepObject.LogInSteps;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +18,8 @@ import static DataObject.LogInData.correctUsernameData;
 
 public class AddToCart  extends BrowserActions {
 
+    @Description("ერთი პროდუქტის დამატება")
+    @Severity(SeverityLevel.CRITICAL)
     @Test( priority = 1)
     public void addOneItem() throws InterruptedException {
         AddToCartSteps step1 = new AddToCartSteps(driver);
@@ -32,6 +37,8 @@ public class AddToCart  extends BrowserActions {
 
     }
 
+    @Description("ერთი პროდუქტის დამატება და remove ")
+    @Severity(SeverityLevel.CRITICAL)
     @Test(priority = 2)
     public void AddItemAndRemove () throws InterruptedException{
         AddToCartSteps step1 = new AddToCartSteps(driver);
@@ -49,6 +56,8 @@ public class AddToCart  extends BrowserActions {
         step1.removeItemAction();
 
     }
+    @Description("ყველა პროდუქტის დამატება")
+    @Severity(SeverityLevel.NORMAL)
     @Test (priority = 3)
     public void addAllItem () throws InterruptedException {
         LogInSteps step1 = new LogInSteps(driver);
@@ -90,6 +99,7 @@ public class AddToCart  extends BrowserActions {
 
 
 
-
-
 }
+
+
+
