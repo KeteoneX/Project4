@@ -94,7 +94,7 @@ public class LogIn extends BrowserActions {
     public void emptyPassword() throws InterruptedException {
         LogInSteps step4 = new LogInSteps(driver);
         step4.usernameFieldAction(correctUsernameData);
-        step4.passwordFieldAction(emptyPasswordData);
+        step4.emptyPasswordAction(emptyPasswordData);
         Thread.sleep(3000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(By.id("login-button")));
